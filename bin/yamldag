@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require 'yamldag'
+
+if ARGV.length > 0
+  yamlfile = ARGV.first
+  if !File.exist?(yamlfile) 
+    puts "#{yamlfile} not found"
+  elsif
+    object = YamlDag.new(ARGV.first)
+    object.build
+  end
+elsif 
+  puts "Just need to pass in a yaml file path 'yaml_dagv path/to/xx.yaml'"
+end
