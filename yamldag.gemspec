@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name          = 'yamldag'
-    s.version       = '0.0.3'
+    s.version       = '0.0.5'
     s.date          = '2022-11-23'
     s.summary       = 'a simple yaml file to generate DAG Graph and visualization'
     s.description   = "a simple yaml file to generate DAG Graph and visualization"
