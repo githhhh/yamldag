@@ -16,10 +16,19 @@ class YamlDag
       # puts "strong_components  ==> #{@dag.strong_components}"
       @nodes = @dag.strong_components.select{|a| a.length > 1}
       @nodes.each do | ns |
-        puts "<--------------cycle------------------>"
-        puts "#{ns.reverse.join('=>')}=>#{ns.reverse.first}"
+        puts "--------------cyclic------------------"
+        puts "#{ns.reverse.join('-->')}-->#{ns.reverse.first}"
       end
     end
+    if @dag.acyclic? 
+      # puts "--------------topsort------------------"
+      # puts "#{@dag.topsort}"
+      puts "--------------dfs------------------"
+      puts "#{@dag.dfs}"
+      puts "--------------bfs------------------"
+      puts "#{@dag.bfs}"
+    end
+    puts "--------------visualize------------------"
     visualize
   end
 
