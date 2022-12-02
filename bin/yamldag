@@ -10,5 +10,5 @@ if ARGV.length > 0
     object.build
   end
 elsif 
-  puts "Just need to pass in a yaml file path 'yaml_dagv path/to/xx.yaml'"
+  puts "Just need to pass in a yaml file path 'yamldag path/to/xx.yaml'"
 end
